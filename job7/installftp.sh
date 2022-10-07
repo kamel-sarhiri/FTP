@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "\e[5m$(tput setaf 7)$(tput setab 1)veuillez passer en root pour que le script fonctionne correctement \e[0m"
+echo "\e[5m$(tput setaf 7)$(tput setab 1) $(tput bold)veuillez passer en root pour que le script fonctionne correctement \e[0m"
 
-echo "\e[5m$(tput setaf 7)$(tput setab 1)Ce message s'autodétruira dans 10 secondes. :D \e[0m"
+echo "\e[5m$(tput setaf 7)$(tput setab 1) $(tput bold)Ce message s'autodétruira dans 10 secondes. :D \e[0m"
 sleep 10
 ##############################################
 #install proftpd et client filezilla
@@ -421,5 +421,7 @@ LoadModule mod_ifsession.c' > /etc/proftpd/modules.conf
 ##########################################
 #restart le serveur pour prendre en compte les modif
 sudo systemctl restart proftpd
+
+echo  "\e[5m$(tput setaf 7)$(tput setab 1) $(tput bold)Le processus est terminé. \e[0m"
 
 
